@@ -1,6 +1,6 @@
-site_common:
-    resource: "@SiteCommonBundle/Resources/config/routing.yml"
-    prefix:   /common
+common_testApi:
+    pattern:  /testApi/{name}
+    defaults: { _controller: SiteCommonBundle:Default:index }
 
 # Internal routing configuration to handle ESI
 #_internal:
