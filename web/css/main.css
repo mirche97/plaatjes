@@ -1,0 +1,23 @@
+/*
+    Document   : main
+    Created on : 25-nov-2012, 20:46:00
+    Author     : mirche
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root {
+    display: block;
+
+
+}
+
+.header{
+    background: #66CCFF;
+    height: 180px;
+}
+.footer{
+   background: #66CCFF;
+   height: 90px;
+}
+

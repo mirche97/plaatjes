@@ -3,11 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <!-- Bootstrap framework -->
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap-responsive.min.css') }}" />
+        <!-- gebo theme (none for default bootstrap colors) -->
+        <!--link rel="stylesheet" href="{{ asset('css/gebo/blue.css') }}" /-->
+        <!-- tooltips-->
+        <link rel="stylesheet" href="{{ asset('lib/qtip2/jquery.qtip.min.css') }}" />
+        <!-- main styles -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        {% block stylesheets %}
+        <link href="{{ asset('/css/main.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container">
+            {% include '::header.html.twig' %}
+            {% block body %}{% endblock %}
+            {% include '::footer.html.twig' %}
+            {% block javascripts %}{% endblock %}
+        </div>
     </body>
 </html>
