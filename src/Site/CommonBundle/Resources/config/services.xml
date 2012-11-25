@@ -4,17 +4,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
+
     <parameters>
-        <parameter key="site_common.example.class">Site\CommonBundle\Example</parameter>
+        <parameter key="api_service.class">Site\CommonBundle\Service\ApiService</parameter>
     </parameters>
 
     <services>
-        <service id="site_common.example" class="%site_common.example.class%">
-            <argument type="service" id="service_id" />
+        <service id="api_service" class="%api_service.class%">
+          <!--  <argument type="service" id="service_id" />
             <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+            <argument>%parameter_name%</argument> -->
+            <argument type="service" id="service_container"/>
         </service>
     </services>
-    -->
+
 </container>
