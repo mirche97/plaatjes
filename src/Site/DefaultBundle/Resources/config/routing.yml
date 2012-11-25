@@ -1,0 +1,8 @@
+home:
+    pattern:  /
+    defaults: { _controller: SiteDefaultBundle:Default:index }
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal

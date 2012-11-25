@@ -21,3 +21,8 @@ root {
    height: 90px;
 }
 
+.album_images img{
+    height: 200px;
+    width: 200px;
+}
+

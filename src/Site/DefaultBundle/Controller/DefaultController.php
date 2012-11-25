@@ -1,6 +1,6 @@
 <?php
 
-namespace Site\CommonBundle\Controller;
+namespace Site\DefaultBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,13 +9,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
+     * @Route("/")
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction()
     {
         $param = array("_format"=>"json");
         $response = $this->get("api_service")->send("albummetas",$param);
-        return $this->render('SiteCommonBundle:Default:index.html.twig', array('name'=>$name));
+
+        $albums  = json_decode($response->getContent());
+
+        return $this->render("SiteDefaultBundle:Default:index.html.twig",array("albums"=>$albums));
     }
 }

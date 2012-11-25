@@ -1,3 +1,7 @@
+site_default:
+    resource: "@SiteDefaultBundle/Resources/config/routing.yml"
+    prefix:   /
+
 site_common:
     resource: "@SiteCommonBundle/Resources/config/routing.yml"
     prefix:   /common

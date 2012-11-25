@@ -20,7 +20,9 @@
     <body>
         <div class="container">
             {% include '::header.html.twig' %}
-            {% block body %}{% endblock %}
+            <div class="body">
+                {% block body %}{% endblock %}
+            </div>
             {% include '::footer.html.twig' %}
             {% block javascripts %}{% endblock %}
         </div>

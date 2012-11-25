@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+{%block body %}
+<div class="album_images">
+{% for album in albums %}
+   <img src="/images/albums/{{album.Image}}.jpg"/>
+{% endfor%}
+</div>
+{%endblock%}
